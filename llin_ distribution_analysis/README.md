@@ -12,7 +12,7 @@ You are a data analyst working for a global health organization. Your task is to
 
 
 # Dataset
-Find the datasetr [here](https://github.com/nyarotoyi/SQL-Portfolio/blob/main/llin_%20distribution_analysis/amf_distributions.csv)
+Find the dataset [here](https://github.com/nyarotoyi/SQL-Portfolio/blob/main/llin_%20distribution_analysis/amf_distributions.csv)
 and the script [here](https://github.com/nyarotoyi/SQL-Portfolio/blob/main/llin_%20distribution_analysis/lln_distributions_analysis.sql).
 
 The dataset was provided by the [NexTech Academy team](https://github.com/NexTech-Ac/data-analysis-bootcamp-2024/blob/main/assignments/sql-assignment/README.md). It contains the following columns:
