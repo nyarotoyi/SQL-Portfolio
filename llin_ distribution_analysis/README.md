@@ -17,19 +17,19 @@ and the script [here](https://github.com/nyarotoyi/SQL-Portfolio/blob/main/llin_
 
 The dataset was provided by the [NexTech Academy team](https://github.com/NexTech-Ac/data-analysis-bootcamp-2024/blob/main/assignments/sql-assignment/README.md). It contains the following columns:
 
-ID: A unique identifier for each distribution record.
+1. ID: A unique identifier for each distribution record.
 
-Number distributed: The number of LLINs distributed.
+2. Number distributed: The number of LLINs distributed.
 
-Location: The specific location where the LLINs were distributed.
+3. Location: The specific location where the LLINs were distributed.
 
-Country: The country where the distribution took place.
+4. Country: The country where the distribution took place.
 
-When: The period during which the distribution occurred.
+5. When: The period during which the distribution occurred.
 
-By_whom: The organization responsible for the distribution.
+6. By_whom: The organization responsible for the distribution.
 
-Country_code: The ISO code of the country.
+7. Country_code: The ISO code of the country.
 
 ## Database
 I used MySQL Workbench of the analysis
