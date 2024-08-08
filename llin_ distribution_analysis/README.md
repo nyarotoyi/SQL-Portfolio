@@ -35,7 +35,7 @@ The dataset was provided by the [NexTech Academy team](https://github.com/NexTec
 I used MySQL Workbench of the analysis
 
 ## Solutions Approach
-** Database and Table Setup**
+**Database and Table Setup**
 
 Created a database named llin_analysis and a table named llin_distribution with appropriate columns for storing distribution data.
 ```sql
