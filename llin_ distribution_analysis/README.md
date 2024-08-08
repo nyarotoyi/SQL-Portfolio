@@ -38,6 +38,7 @@ I used MySQL Workbench of the analysis
 **Database and Table Setup**
 
 Created a database named llin_analysis and a table named llin_distribution with appropriate columns for storing distribution data.
+
 ```sql
 -- Create the llin_analysis database
 CREATE DATABASE llin_analysis;
@@ -58,6 +59,7 @@ CREATE TABLE llin_distribution (
 **Descriptive Statistics**
 
 Calculated the total number of LLINs distributed in each country.
+
 ```sql
 -- Calculate the total number of LLINs distributed in each country
 SELECT 
@@ -72,6 +74,7 @@ ORDER BY
 ```
 
 Found the average number of LLINs distributed per distribution event.
+
 ```sql
 -- Calculate the average number of LLINs distributed per distribution event
 SELECT 
@@ -206,7 +209,9 @@ In terms of locations, "Western & Eastern" regions in Uganda had the highest dis
 The distribution totals varied significantly between years, with notable differences in volumes
 
 2006: 8,301,133 LLINs
+
 2007: 27,672,820 LLINs
+
 This variation suggests potential changes in distribution strategies or external factors influencing distribution volumes.
 
 **Anomalies**
@@ -226,13 +231,15 @@ Significant deviations in distribution numbers were observed.
 These findings highlight significant trends and anomalies that could inform further investigation into the effectiveness and distribution practices of LLIN campaigns.
 ## How to use
 1. Accessing the Data
+   
 Import the dataset into MySQL Workbench and execute the provided SQL queries to replicate the analysis.
 
-2. Analyzing Results
+3. Analyzing Results
+   
 Review the output of the queries to understand distribution patterns, trends, and anomalies.
 Use the findings to assess the effectiveness of LLIN distribution campaigns and make data-driven decisions for future interventions.
 
-3. Further Analysis
+5. Further Analysis
 
 Extend the analysis by incorporating additional data or applying more advanced statistical techniques to gain deeper insights into LLIN distribution dynamics.
 # Get in touch
