@@ -43,26 +43,181 @@ CREATE TABLE llin_distribution (
     year DATE,
     by_whom VARCHAR(255),
     country_code VARCHAR(50)
-);```
+);
+``` 
 
-Descriptive Statistics:
+**Descriptive Statistics**
 
 Calculated the total number of LLINs distributed in each country.
+``` -- Calculate the total number of LLINs distributed in each country
+SELECT 
+    country,
+    SUM(number_distributed) AS total_llins
+FROM 
+    amf_distributions
+GROUP BY 
+    country
+ORDER BY 
+    total_llins DESC;
+```
+
 Found the average number of LLINs distributed per distribution event.
+```
+-- Calculate the average number of LLINs distributed per distribution event
+SELECT 
+    AVG(number_distributed) AS average_distribution_per_event
+FROM 
+    amf_distributions;
+```
 Determined the earliest and latest distribution dates.
-Trends and Patterns:
+```
+/*Determine the earliest and latest distribution dates in the dataset
+ Since we are working with years, we'll use MIN and MAX on the year column
+ */
+ 
+SELECT 
+    MIN(year) AS earliest_date,
+    MAX(year) AS latest_date
+FROM 
+    amf_distributions;
+``` 
+**Trends and Patterns**
 
 Identified the total number of LLINs distributed by each organization.
+```
+-- Identify the total number of LLINs distributed by each organization
+SELECT 
+    by_whom,
+    SUM(number_distributed) AS total_llins
+FROM 
+    amf_distributions
+GROUP BY 
+    by_whom
+ORDER BY 
+    total_llins DESC;
+```
 Calculated the total number of LLINs distributed in each year.
-Volume Insights:
+```
+SELECT 
+    year,
+    SUM(number_distributed) AS total_llins
+FROM 
+    amf_distributions
+GROUP BY 
+    year
+ORDER BY 
+    year ASC;
+```
+
+**Volume Insights**
 
 Found the locations with the highest and lowest number of LLINs distributed.
-Analyzed variations in the number of LLINs distributed by different organizations.
-Identifying Extremes:
+```
+-- Find the location with the highest number of LLINs distributed
+SELECT 
+    country,
+    location,
+    SUM(number_distributed) AS total_llins
+FROM 
+    amf_distributions
+GROUP BY 
+    country,       
+    location
+ORDER BY 
+    total_llins DESC
+LIMIT 1;
+
+-- Find the location with the lowest number of LLINs distributed
+SELECT 
+    country,
+    location,
+    SUM(number_distributed) AS total_llins
+FROM 
+    amf_distributions
+GROUP BY 
+    country,
+    location
+ORDER BY 
+    total_llins ASC
+LIMIT 1;
+
+```
+**Identifying Extremes**
 
 Detected any outliers or significant spikes in the number of LLINs distributed in specific locations or periods.
+```
+SELECT 
+    by_whom,
+    AVG(number_distributed) AS average_distributions,
+    STDDEV(number_distributed) AS stddev_distributions
+FROM 
+    amf_distributions
+GROUP BY 
+    by_whom
+ORDER BY 
+    average_distributions DESC;
+``` 
+
 ## Findings
+**Distribution Pattern**
+The analysis revealed significant variability in the number of LLINs distributed across different countries and locations. Uganda received the highest total number of LLINs distributed, amounting to 12,869,970. In contrast, Gabon had the lowest total distribution with only 800 LLINs. A total of 8,015,000 LLINs were distributed in countries that have not yet made their data public.
 
+In terms of locations, "Western & Eastern" regions in Uganda had the highest distributions with a total of 12,752,620 LLINs, while the Kumali District in Uganda had the lowest distribution, with only 800 LLINs.
+
+**Top Distributors**
+
+*Certain organizations have distributed significantly higher volumes of LLINs*
+
+- NMCP/Various: 19,669,420 LLINs
+- Yet to be made public: 8,015,000 LLINs
+- NMCP/ERD: 2,689,100 LLINs
+- Concern Universal: 1,809,920 LLINs
+- IMA World Health/DFID: 1,336,000 LLINs
+- Rotary Club of Port Moresby: 1,159,400 LLINs
+- World Vision: 300,350 LLINs
+- Red Cross: 260,710 LLINs
+  
+*On the other end, some organizations had minimal distribution volumes*
+
+- Danyi's Children: 500 LLINs
+- Pro-Link Ghana: 400 LLINs
+- GHEI: 300 LLINs
+- Uganda Lodge: 250 LLINs
+- Individs: 240 LLINs
+- Ndebele Arts Project: 150 LLINs
+  
+**Yearly Trends**
+The distribution totals varied significantly between years, with notable differences in volumes
+
+2006: 8,301,133 LLINs
+2007: 27,672,820 LLINs
+This variation suggests potential changes in distribution strategies or external factors influencing distribution volumes.
+
+**Anomalies**
+Significant deviations in distribution numbers were observed. 
+
+NMCP/Various: Average distribution of 2,809,917.14 LLINs with a high standard deviation of 4,190,045.29
+Yet to be made public: Average distribution of 2,003,750.00 LLINs with a standard deviation of 1,116,934.28
+NMCP/ERD: Average distribution of 896,366.67 LLINs with a standard deviation of 325,745.90
+Concern Universal: Average distribution of 180,992.00 LLINs with a standard deviation of 136,041.95
+IMA World Health/DFID: Average distribution of 668,000.00 LLINs with a standard deviation of 37,468.00
+Rotary International: Average distribution of 34,685.75 LLINs with a standard deviation of 37,396.06
+World Vision: Average distribution of 150,175.00 LLINs with a standard deviation of 16,825.00
+Red Cross: Average distribution of 11,335.22 LLINs with a standard deviation of 12,094.44
+Malaria Consortium: Average distribution of 12,742.86 LLINs with a standard deviation of 11,391.58
+PCV: Average distribution of 4,740.00 LLINs with a standard deviation of 4,508.37
+
+These findings highlight significant trends and anomalies that could inform further investigation into the effectiveness and distribution practices of LLIN campaigns.
 ## How to use
+1. Accessing the Data
+Import the dataset into MySQL Workbench and execute the provided SQL queries to replicate the analysis.
 
+2. Analyzing Results
+Review the output of the queries to understand distribution patterns, trends, and anomalies.
+Use the findings to assess the effectiveness of LLIN distribution campaigns and make data-driven decisions for future interventions.
+
+3. Further Analysis
+
+Extend the analysis by incorporating additional data or applying more advanced statistical techniques to gain deeper insights into LLIN distribution dynamics.
 # Get in touch
+For more information or questions regarding this analysis, please contact us at zianaodero@gmail.com 0r my LinkedIN [Marice Ziana](https://www.linkedin.com/in/marice-ziana-a51442146/).
