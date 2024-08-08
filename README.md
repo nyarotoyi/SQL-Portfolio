@@ -7,7 +7,7 @@ I'm a dedicated Data Scientist with a passion for harnessing data to drive innov
 
 ## SQL projects
 In this repository, you will find a variety of SQL projects, including:
-
+ 1. [LLIN Distribution Analysis](https://github.com/nyarotoyi/SQL-Portfolio/tree/main/llin_%20distribution_analysis) : In this project we analyze the distribution of Long-Lasting Insecticidal Nets (LLINs) across various locations in multiple countries for a gloabal health organization. The goal is to understand the distribution patterns, identify trends, and gain insights into the effectiveness of different distribution campaigns.
 
 ## Repository Structure
 
