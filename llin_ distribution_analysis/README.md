@@ -58,7 +58,8 @@ CREATE TABLE llin_distribution (
 **Descriptive Statistics**
 
 Calculated the total number of LLINs distributed in each country.
-``` -- Calculate the total number of LLINs distributed in each country
+```sql
+-- Calculate the total number of LLINs distributed in each country
 SELECT 
     country,
     SUM(number_distributed) AS total_llins
