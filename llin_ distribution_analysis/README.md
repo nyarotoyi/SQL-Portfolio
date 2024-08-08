@@ -174,6 +174,7 @@ ORDER BY
 ``` 
 
 ## Findings
+
 **Distribution Pattern**
 The analysis revealed significant variability in the number of LLINs distributed across different countries and locations. Uganda received the highest total number of LLINs distributed, amounting to 12,869,970. In contrast, Gabon had the lowest total distribution with only 800 LLINs. A total of 8,015,000 LLINs were distributed in countries that have not yet made their data public.
 
@@ -211,16 +212,16 @@ This variation suggests potential changes in distribution strategies or external
 **Anomalies**
 Significant deviations in distribution numbers were observed. 
 
-NMCP/Various: Average distribution of 2,809,917.14 LLINs with a high standard deviation of 4,190,045.29
-Yet to be made public: Average distribution of 2,003,750.00 LLINs with a standard deviation of 1,116,934.28
-NMCP/ERD: Average distribution of 896,366.67 LLINs with a standard deviation of 325,745.90
-Concern Universal: Average distribution of 180,992.00 LLINs with a standard deviation of 136,041.95
-IMA World Health/DFID: Average distribution of 668,000.00 LLINs with a standard deviation of 37,468.00
-Rotary International: Average distribution of 34,685.75 LLINs with a standard deviation of 37,396.06
-World Vision: Average distribution of 150,175.00 LLINs with a standard deviation of 16,825.00
-Red Cross: Average distribution of 11,335.22 LLINs with a standard deviation of 12,094.44
-Malaria Consortium: Average distribution of 12,742.86 LLINs with a standard deviation of 11,391.58
-PCV: Average distribution of 4,740.00 LLINs with a standard deviation of 4,508.37
+- NMCP/Various: Average distribution of 2,809,917.14 LLINs with a high standard deviation of 4,190,045.29
+- Yet to be made public: Average distribution of 2,003,750.00 LLINs with a standard deviation of 1,116,934.28
+- NMCP/ERD: Average distribution of 896,366.67 LLINs with a standard deviation of 325,745.90
+- Concern Universal: Average distribution of 180,992.00 LLINs with a standard deviation of 136,041.95
+- IMA World Health/DFID: Average distribution of 668,000.00 LLINs with a standard deviation of 37,468.00
+- Rotary International: Average distribution of 34,685.75 LLINs with a standard deviation of 37,396.06
+- World Vision: Average distribution of 150,175.00 LLINs with a standard deviation of 16,825.00
+- Red Cross: Average distribution of 11,335.22 LLINs with a standard deviation of 12,094.44
+- Malaria Consortium: Average distribution of 12,742.86 LLINs with a standard deviation of 11,391.58
+- PCV: Average distribution of 4,740.00 LLINs with a standard deviation of 4,508.37
 
 These findings highlight significant trends and anomalies that could inform further investigation into the effectiveness and distribution practices of LLIN campaigns.
 ## How to use
