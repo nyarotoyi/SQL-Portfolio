@@ -43,7 +43,7 @@ CREATE TABLE llin_distribution (
     year DATE,
     by_whom VARCHAR(255),
     country_code VARCHAR(50)
-); 
+);```
 
 Descriptive Statistics:
 
