@@ -72,15 +72,17 @@ ORDER BY
 ```
 
 Found the average number of LLINs distributed per distribution event.
-```
+```sql
 -- Calculate the average number of LLINs distributed per distribution event
 SELECT 
     AVG(number_distributed) AS average_distribution_per_event
 FROM 
     amf_distributions;
 ```
+
 Determined the earliest and latest distribution dates.
-```
+
+```sql
 /*Determine the earliest and latest distribution dates in the dataset
  Since we are working with years, we'll use MIN and MAX on the year column
  */
@@ -94,7 +96,8 @@ FROM
 **Trends and Patterns**
 
 Identified the total number of LLINs distributed by each organization.
-```
+
+```sql
 -- Identify the total number of LLINs distributed by each organization
 SELECT 
     by_whom,
@@ -106,8 +109,10 @@ GROUP BY
 ORDER BY 
     total_llins DESC;
 ```
+
 Calculated the total number of LLINs distributed in each year.
-```
+
+```sql
 SELECT 
     year,
     SUM(number_distributed) AS total_llins
@@ -122,7 +127,7 @@ ORDER BY
 **Volume Insights**
 
 Found the locations with the highest and lowest number of LLINs distributed.
-```
+```sql
 -- Find the location with the highest number of LLINs distributed
 SELECT 
     country,
@@ -155,7 +160,7 @@ LIMIT 1;
 **Identifying Extremes**
 
 Detected any outliers or significant spikes in the number of LLINs distributed in specific locations or periods.
-```
+```sql
 SELECT 
     by_whom,
     AVG(number_distributed) AS average_distributions,
