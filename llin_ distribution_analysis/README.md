@@ -1,6 +1,7 @@
 # Long-Lasting Insecticidal Nets (LLIN) Distribution Analysis
 In this project we use SQL in MySQL to analyse the distibution of Long-Lasting Insecticidal Nets (LLINs) across various locations in multiple  African countries.
-We intend to gain meaningful insights.
+
+We intend to gain insights that could inform future distribution strategies.
 # The Challenge
 
 You are a data analyst working for a global health organization. Your task is to analyze the distribution of Long-Lasting Insecticidal Nets (LLINs) across various locations in multiple countries. The goal is to understand the distribution patterns, identify trends, and gain insights into the effectiveness of different distribution campaigns
